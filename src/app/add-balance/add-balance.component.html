@@ -1,0 +1,23 @@
+<div class="div">
+    <div  >
+        <label>Type d'identité du client :</label>
+        <select name="clientIdentityType"  [(ngModel)]="clientIdentityType">
+            <option>CIN</option>
+            <option>Passport</option>
+        </select> 
+    </div>
+    <div >
+        <label >Numéro d'identité :</label>
+        <input type="text"   name="identityNumber" [(ngModel)]="identityNumber">
+    </div>
+    <div >
+        <label >Montant de la balance :</label>
+        <input type="number"  name="balanceAmount" [(ngModel)]="balanceAmount">
+    </div>
+
+    <div>
+        <button type="button" class="btn" (click)="onSubmit()">Ajouter Balance</button>
+     </div>
+</div>
+
+
