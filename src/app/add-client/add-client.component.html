@@ -1,0 +1,105 @@
+<div class="container mt-5">
+    <div class="card shadow">
+      <div class="card-body">
+        <h2 i18n class="mb-3">Ajouter Client</h2>
+        <form class="row g-3" #ajoutForm="ngForm" (ngSubmit)="goToConn(formData)">
+          <div class="col-md-4">
+            <label for="exampleFormControlSelect1" i18n>Choisir Sexe</label>
+            <select id="inputState" class="form-select" name="gender" [(ngModel)]="formData.gender">
+              <option [ngValue]="undefined" disabled="disabled" i18n >Sexe</option>
+              <option>Mr.</option>
+              <option>Mme.</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="exampleFormControlSelect1" i18n>Type de pièce d'identité</label>
+            <select id="inputState" class="form-select" name="identityType" [(ngModel)]="formData.identityType">
+              <option value="0" [ngValue]="undefined" disabled="disabled" i18n>ID</option>
+              <option>CIN</option>
+              <option>Passport</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputEmail4" class="form-label" i18n>N° pièce d'identité</label>
+            <input type="text" class="form-control" id="inputEmail4" name="identityNumber" [(ngModel)]="formData.identityNumber">
+          </div>
+          <div class="col-md-4">
+            <label for="inputEmail4" class="form-label" i18n>Prénom</label>
+            <input type="text" class="form-control" id="inputEmail4" name="firstname" [(ngModel)]="formData.firstname">
+          </div>
+          <div class="col-md-4">
+            <label for="inputEmail4" class="form-label" i18n>Nom</label>
+            <input type="text" class="form-control" id="inputEmail4" name="lastname" [(ngModel)]="formData.lastname">
+          </div>
+          <div class="col-md-4">
+            <label for="inputPassword4" class="form-label" i18n>Email</label>
+            <input type="email" class="form-control" id="inputPassword4" name="email" [(ngModel)]="formData.email">
+          </div>
+          <div class="col-md-4">
+            <label for="inputEmail4" class="form-label" i18n>Pays de nationalité</label>
+            <select id="inputState" class="form-select" name="nationality" [(ngModel)]="formData.nationality">
+              <option value="0" [ngValue]="undefined" disabled="disabled" i18n>Pays de nationalité</option>
+              <option i18n>Morocco</option>
+              <option i18n>US4A</option>
+              <option i18n>France</option>
+              <option i18n>Germany</option>
+              <option i18n>Belgium</option>
+              <option i18n>Spain</option>
+              <option i18n>Canada</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputPassword4" class="form-label" i18n>GSM</label>
+            <input type="number" class="form-control" id="inputPassword4" name="phoneNumber" [(ngModel)]="formData.phoneNumber">
+          </div>
+          <div class="col-md-4">
+            <label for="inputAddress" class="form-label" i18n>Adresse légale</label>
+            <input type="text" class="form-control" id="inputAddress" name="address" [(ngModel)]="formData.address">
+          </div>
+          <div class="col-md-4">
+            <label for="inputCity" class="form-label" i18n>Date de naissance</label>
+            <input type="text" class="form-control" id="inputCity" name="birthdayDate" [(ngModel)]="formData.birthdayDate">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label" i18n>Ville</label>
+            <select id="inputState" class="form-select" name="city" [(ngModel)]="formData.city">
+              <option value="0" [ngValue]="undefined" disabled="disabled" i18n>Ville</option>
+              <option>Marrakech</option>
+              <option>Rabat</option>
+              <option>Casablanca</option>
+              <option>Paris</option>
+              <option>Seville</option>
+              <option>Munich</option>
+              <option>Toronto</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label" i18n>Pays d'émission</label>
+            <select id="inputState" class="form-select" name="emissionCountry" [(ngModel)]="formData.emissionCountry">
+              <option value="0" [ngValue]="undefined" disabled="disabled" i18n>Pays d'émission</option>
+              <option i18n>Morocco</option>
+              <option i18n>USA</option>
+              <option i18n>France</option>
+              <option i18n>Germany</option>
+              <option i18n>Belgium</option>
+              <option i18n>Spain</option>
+              <option i18n>Canada</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" i18n>Profession</label>
+            <select id="inputState" class="form-select" name="occupation" [(ngModel)]="formData.occupation">
+              <option value="0" [ngValue]="undefined" disabled="disabled" i18n>Profession</option>
+              <option i18n>Teacher</option>
+              <option i18n>Doctor</option>
+              <option i18n>Engineer</option>
+            </select>
+          </div>
+          <div class="col-12 d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
