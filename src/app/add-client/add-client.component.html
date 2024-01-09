@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <div class="card shadow">
       <div class="card-body">
-        <h2 i18n class="mb-3">Ajouter Client</h2>
+        <h2 i18n class="mb-3">Ajouter un Nouveau Client</h2>
         <form class="row g-3" #ajoutForm="ngForm" (ngSubmit)="goToConn()">
           
           
@@ -28,12 +28,15 @@
             <input type="text" class="form-control" id="adress" name="address" [(ngModel)]="address">
           </div>
           
-         
-          
           
           <div class="col-12 d-flex justify-content-center mt-3">
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary">Ajouter le Client</button>
           </div>
+
+          <div *ngIf="successMessage" class="mt-3 alert alert-success" role="alert">
+            {{ successMessage }}
+          </div>
+
         </form>
       </div>
     </div>
