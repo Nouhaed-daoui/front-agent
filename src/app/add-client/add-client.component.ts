@@ -19,7 +19,7 @@ export class AddClientComponent {
   address: string = '';
   firstName: string = '';
   lastName: string = '';
-  email: string = '@gmail.com';
+  email: string = '';
   successMessage: string = ''; 
 
   @ViewChild('ajoutForm', { static: false }) ajoutForm: NgForm | undefined;
@@ -61,7 +61,7 @@ export class AddClientComponent {
     this.address = '';
     this.firstName = '';
     this.lastName = '';
-    this.email = 'test';
+    this.email = '';
   }
 }
 
