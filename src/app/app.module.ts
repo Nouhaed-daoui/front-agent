@@ -12,6 +12,7 @@ import { ListClientComponent } from './list-client/list-client.component';
 import { InfoTransactionComponent } from './info-transaction/info-transaction.component';
 import { AddBalanceComponent } from './add-balance/add-balance.component';
 import { TransactionService } from './transaction.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TransactionService } from './transaction.service';
     InfoTransactionComponent,
     NavbarComponent,
     AddClientComponent,
-    ListClientComponent
+    ListClientComponent,
+    HomeComponent
   ],
   imports: [
     FormsModule,

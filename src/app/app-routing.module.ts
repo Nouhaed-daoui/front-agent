@@ -4,12 +4,14 @@ import { AddClientComponent } from './add-client/add-client.component';
 import { ListClientComponent } from './list-client/list-client.component';
 import { AddBalanceComponent } from './add-balance/add-balance.component';
 import { InfoTransactionComponent } from './info-transaction/info-transaction.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'addClient', component: AddClientComponent },
   { path: 'listClients', component: ListClientComponent },
   { path: 'add-balance', component:  AddBalanceComponent},
   { path: 'info-transaction', component: InfoTransactionComponent },
+  { path: '', component: HomeComponent },
 ];
 
 
