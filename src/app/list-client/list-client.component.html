@@ -9,12 +9,19 @@
           <thead>
             <tr>
               <th scope="col">Nom du Client</th>
+              <th scope="col">Prénom du Client</th>
+              
+              <th scope="col">Id Du wallett</th>
+              <th scope="col">Solde Du client</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let client of clients">
-              <td>{{ client.name }}</td>
+              <td>{{ client.lastName }}</td>
+              <td>{{ client.firstName }}</td>
+              <td>{{ client.walletId }}</td>
+              <td>{{ client.balance }}</td>
               <td>
                 <button
                   type="button"

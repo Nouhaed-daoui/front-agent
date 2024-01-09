@@ -16,39 +16,33 @@ import { ClientService } from '../client-service.service';
 
 
 export class AddClientComponent {
-  // Déclarez un objet pour stocker les données du formulaire
-  formData: any = {
-    gender: undefined,
-    identityType: undefined,
-    identityNumber: '',
-    firstname: '',
-    lastname: '',
-    email: '',
-    nationality: undefined,
-    phoneNumber: null,
-    address: '',
-    birthdayDate: '',
-    city: undefined,
-    emissionCountry: undefined,
-    occupation: undefined
-  };
-sexe: any;
+  cin: string = '';
+  showTable: boolean = true;
+  address: string = '';
+  firstName: string = '';
+  lastName: string = '';
+  email: string = '';
 
   constructor(private clientService: ClientService) {}
 
-  goToConn(formData: any): void {
+  goToConn(): void {
     // Utilisez le service pour envoyer les données à l'API
-    this.clientService.postFormData(formData)
-      .subscribe(
-        (response) => {
-          // Gérez la réponse du backend ici (facultatif)
-          console.log('Réponse du backend:', response);
-        },
-        (error) => {
-          // Gérez les erreurs ici (facultatif)
-          console.error('Erreur lors de la requête POST:', error);
-        }
-      );
+    this.clientService.postFormData({
+      email: this.email,
+      address: this.address,
+      cin: this.cin,
+      lastName: this.lastName,
+      firstName: this.firstName,
+    }).subscribe(
+      (response) => {
+        // Gérez la réponse du backend ici (facultatif)
+        console.log('Réponse du backend:', response);
+      },
+      (error) => {
+        // Gérez les erreurs ici (facultatif)
+        console.error('Erreur lors de la requête POST:', error);
+      }
+    );
   }
 }
 

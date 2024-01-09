@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,11 +7,18 @@ import { Observable } from 'rxjs';
 })
 export class TransactionService {
   
-  private apiUrl = 'https://localhost:port/api/transactions'; // Remplacez par votre API
+  private apiUrl = 'http://localhost:8090/api/v1/agent/transactions'; // Remplacez par votre API
 
   constructor(private http: HttpClient) { }
 
   getTransactions(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      })
+    };
+    return this.http.get<any[]>(this.apiUrl,httpOptions);
   }
 }

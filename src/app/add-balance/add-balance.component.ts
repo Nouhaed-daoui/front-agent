@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient ,HttpHeaders} from '@angular/common/http';
 
 
 @Component({
@@ -11,23 +11,29 @@ export class AddBalanceComponent {
 
   constructor(private http: HttpClient) { }
   
-    clientIdentityType: string = "" 
-    identityNumber: string ="" 
-    balanceAmount: number = 0 
+    
+    cin: string ="" 
+    amount: number = 0 
 
   onSubmit() {
    
     // Ajoutez le code pour ajouter le montant de la balance au wallet du client
-      const apiUrl = 'http://localhost:port/api/balances';
+      const apiUrl = 'http://localhost:8090/api/v1/agent/updateBalance';
   
       const data = {
-        clientIdentityType: this.clientIdentityType,
-        identityNumber: this.identityNumber,
-        balanceAmount: this.balanceAmount
+        cin: this.cin,
+        amount: this.amount
       };
       const jsonString = JSON.stringify(data);
+      const httpOptions = {
+        headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        })
+      };
   
-      this.http.post(apiUrl,jsonString)
+  
+      this.http.put(apiUrl,jsonString,httpOptions)
         .subscribe(
           (response : any) => {
             console.log(response);
