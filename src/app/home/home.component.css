@@ -1,0 +1,27 @@
+.grayscale {
+    filter: grayscale(100%); 
+  }
+  
+.container {
+    background-color: #ffffff; 
+    padding: 20px;
+  }
+  
+  .description {
+    font-size: 24px; 
+  }
+  
+  .btn-animated {
+    font-size: 18px; 
+  }
+  
+  .text-black {
+    color: #000; 
+  }
+  
+
+  .btn-animated:hover {
+    background-color: #343a40; 
+    border-color: #343a40; 
+ }
+  

@@ -1,41 +1,45 @@
 <div class="container mt-5">
-    <div class="card shadow">
-      <div class="card-body">
-        <h2 i18n class="mb-3">Ajouter Client</h2>
-        <form class="row g-3" #ajoutForm="ngForm" (ngSubmit)="goToConn()">
-          
-          
-          <div class="col-md-4">
-            <label for="inputEmail4" class="form-label" i18n>N° pièce d'identité</label>
-            <input type="text" class="form-control" id="cin" name="cin" [(ngModel)]="cin">
-          </div>
-          <div class="col-md-4">
-            <label for="inputEmail4" class="form-label" i18n>Prénom</label>
-            <input type="text" class="form-control" id="inputEmail4" name="firstName" [(ngModel)]="firstName">
-          </div>
-          <div class="col-md-4">
-            <label for="inputEmail4" class="form-label" i18n>Nom</label>
-            <input type="text" class="form-control" id="inputEmail4" name="lastname" [(ngModel)]="lastName">
-          </div>
-          <div class="col-md-4">
-            <label for="inputPassword4" class="form-label" i18n>Email</label>
-            <input type="email" class="form-control" id="inputPassword4" name="email" [(ngModel)]="email">
-          </div>
-          
-          
-          <div class="col-md-4">
-            <label for="inputAddress" class="form-label" i18n>Adresse légale</label>
-            <input type="text" class="form-control" id="adress" name="address" [(ngModel)]="address">
-          </div>
-          
-         
-          
-          
-          <div class="col-12 d-flex justify-content-center mt-3">
-            <button type="submit" class="btn btn-primary">Register</button>
-          </div>
-        </form>
-      </div>
+  <div class="card shadow">
+    <div class="card-body">
+      <h2 i18n class="mb-3 text-center">Ajouter Client</h2>
+      <form class="row g-3 justify-content-center" #ajoutForm="ngForm" (ngSubmit)="goToConn()">
+        <ul class="list-unstyled text-center">
+          <li class="mb-3 ">
+            <div class="col-md-8 mx-auto">
+              <label for="cin" class="form-label" i18n>N° pièce d'identité</label>
+              <input type="text" class="form-control" id="cin" name="cin" [(ngModel)]="cin">
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="col-md-8 mx-auto">
+              <label for="firstName" class="form-label" i18n>Prénom</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="firstName">
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="col-md-8 mx-auto">
+              <label for="lastName" class="form-label" i18n>Nom</label>
+              <input type="text" class="form-control" id="lastName" name="lastname" [(ngModel)]="lastName">
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="col-md-8 mx-auto">
+              <label for="email" class="form-label" i18n>Email</label>
+              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+            </div>
+          </li>
+          <li class="mb-3">
+            <div class="col-md-8 mx-auto">
+              <label for="address" class="form-label" i18n>Adresse légale</label>
+              <input type="text" class="form-control" id="address" name="address" [(ngModel)]="address">
+            </div>
+          </li>
+        </ul>
+
+        <div class="col-12 mt-0 text-center">
+          <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+      </form>
     </div>
   </div>
-  
+</div>
