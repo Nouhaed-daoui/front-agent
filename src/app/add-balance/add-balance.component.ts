@@ -14,7 +14,7 @@ export class AddBalanceComponent {
     
     cin: string ="" 
     amount: number = 0 
-
+    
   onSubmit() {
    
     // Ajoutez le code pour ajouter le montant de la balance au wallet du client
