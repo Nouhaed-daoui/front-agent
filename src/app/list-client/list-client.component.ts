@@ -9,13 +9,6 @@ import { ListClientServiceService } from '../list-client-service.service';
 export class ListClientComponent {
   clients: any[] = [];
 
-    // Mock clients for testing
-    mockClients: any[] = [
-      { lastName: 'Doe', firstName: 'John', walletId: 'W123', balance: 1000, blacklisted: false },
-      { lastName: 'Smith', firstName: 'Alice', walletId: 'W456', balance: 500, blacklisted: true },
-      // Add more mock clients as needed
-    ];
-
   constructor(private listclientService: ListClientServiceService) {}
 
   ngOnInit(): void {
@@ -36,7 +29,6 @@ export class ListClientComponent {
   toggleBlacklistStatus(clientId: number): void {
     this.listclientService.toggleBlacklistStatus(clientId).subscribe(
       () => {
-        // Mettez à jour la liste des clients après le changement de statut
         this.loadClients();
       },
       (error) => {

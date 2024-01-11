@@ -7,22 +7,6 @@ import { TransactionService } from '../transaction.service';
   styleUrls: ['./info-transaction.component.css']
 })
 export class InfoTransactionComponent  implements OnInit {
-  trs : any[] = [
-    {
-    senderEmail : "aicha@gmail",
-    beneficiaryEmail: "mariam@gmail...",
-    amount:2345,
-    date : "01/01/2024",
-    status: "extournee"
-   },
-   {
-    senderEmail : "aicha@gmail",
-    beneficiaryEmail: "mariam@gmail...",
-    amount:2345,
-    date : "01/01/2024",
-    status: "extournee"
-   },
-]
   transactions: any[] = [];
 
   constructor(private transactionService: TransactionService) { }

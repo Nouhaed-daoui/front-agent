@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TransactionService {
-  
-  private apiUrl = 'http://localhost:8090/api/v1/agent/transactions'; // Remplacez par votre API
+
+  private apiUrl = 'http://localhost:8222/api/v1/agent/transactions';
 
   constructor(private http: HttpClient) { }
 

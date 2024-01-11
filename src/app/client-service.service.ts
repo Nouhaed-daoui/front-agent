@@ -7,13 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClientService {
-  private apiUrl = 'http://localhost:8090/api/v1/agent/addClient'; // Remplacez par l'URL réelle de votre API
+  private apiUrl = 'http://localhost:8222/api/v1/agent/addClient';
 
   constructor(private http: HttpClient) {}
 
   postFormData(data : any): Observable<any> {
     const json = JSON.stringify(data);
-     // Remplacez par le point de terminaison de votre API
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
